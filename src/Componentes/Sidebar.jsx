@@ -60,7 +60,7 @@ export const Sidebar = () => {
         <div className="menu">
           <ul className="menu-links">
             <li className="nav-link" name="icon-home">
-              <Link to="/cincho">
+              <Link to="/">
                 <i className="bx bx-home-alt icon"></i>
                 <span className="text nav-text">Inicio</span>
               </Link>

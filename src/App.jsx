@@ -21,10 +21,10 @@ function App() {
       </div>  
       <div className='container'>
         <Router>
-          <Route path="/cincho" component={FormularioCincho} />
+          <Route path="/" component={FormularioCincho} />
           <Route path="/cliente" component={FormularioCliente} />
           <Route path="/factura" component={DetallePedido} />
-          <Redirect to="/cincho" />
+          <Redirect to="/" />
         </Router>
       </div>
       </GlobalProvider>
