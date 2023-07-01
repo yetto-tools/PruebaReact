@@ -1,0 +1,61 @@
+.thead-detalle{
+    width: 100%;
+}
+
+.card-detalle{
+    width: 100%;
+    background-color: #fbfbfb;
+    margin: 10px;
+    padding: 25px;
+}
+
+
+.detalle-factura {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .factura {
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  .cliente-info {
+    margin-bottom: 10px;
+  }
+  
+  .detalle-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    background-color: #0095ff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  @media (max-width: 768px) {
+    .detalle-grid {
+      align-items: center;
+    }
+  }
+
+  
+ h2 {
+    align-self: center;
+  }

@@ -1,0 +1,130 @@
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; 
+}
+:root{
+  background-color: #f1f1f1ab;
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items:  center;
+  height: calc(96vh - 80px);
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+form {
+  margin-right: 25px;
+  width: 400px;
+  height: 600px;
+  border: 1px solid #ccc;
+  border-radius: .375rem;
+  background: rgba(255, 255, 255, 0.455);
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+}
+
+.form-materiales {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+label {
+  margin-bottom: 15px;
+}
+.form-group {
+  width: 90%;
+  margin: 15px;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.form-group input{
+  font-size:  1.5rem;
+  outline: #ccc;
+  border: 1px solid #ccc;
+} 
+
+.form-group select {
+  font-size: 1.5rem;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+.form-group button {
+  margin-top: 10px;
+  width: 50%;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #3085d6;
+  height: 48px;
+  border-radius: .375rem;
+}
+
+.form-pedido-cinchos {
+  display: flex;    
+}
+form button {
+  color: white;
+  background-color: #3085d6;
+  height: 48px;
+  border: 1px solid #ccc;
+  border-radius: .375rem;
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+.card-tabla {
+  padding:  15px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table thead {
+  background-color: #dedede;
+  height: 48px;
+}
+
+.table-body {
+  max-height: 480px;
+  overflow-y: auto;
+}
+.table tbody tr td {
+  text-align: right;
+  border-bottom: 1px solid #ccc;
+}
+
+.btn-danger {
+  background-color: #c62e2e;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-size: .675rem;
+  height: 32px;
+}
+
+.toExcel{
+  background-color:green;
+}
