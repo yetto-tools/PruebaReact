@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'wouter';
+
 import * as XLSX from 'xlsx';
 
 import Swal from 'sweetalert2'
@@ -7,8 +7,11 @@ import withReactContent from 'sweetalert2-react-content'
 
 const MySwal = withReactContent(Swal)
 
+import { useLocation } from 'wouter';
 
 export const DetallePedido = () => {
+
+  const [location, setLocation] = useLocation();
   const facturas = JSON.parse(localStorage.getItem('Facturas')) || [];
 
   const [expandedFacturaIndex, setExpandedFacturaIndex] = useState(-1);
@@ -26,14 +29,7 @@ export const DetallePedido = () => {
   const exportToExcel = () => {
     const wb = XLSX.utils.book_new();
     console.log(facturas);
-    if(facturas.length == 0  || facturas == undefined){
-      MySwal.fire({
-        title: 'No hay Información para Exportar',
-        confirmButtonColor : '#157347'
-      })
-      return
-    }    
-    else {
+
       facturas.forEach((factura, i) => {
         const facturaWithClientInfo = factura.detalle.map(detalle => ({
           'Nit': factura.cliente.nit,
@@ -54,7 +50,15 @@ export const DetallePedido = () => {
       XLSX.writeFile(wb, `facturas_${now.toLocaleDateString().replaceAll('/','_')}.xlsx`);
       localStorage.removeItem(`Facturas`);
   
-    }
+      MySwal.fire({
+        title: `Informacion_${now.toLocaleDateString().replaceAll('/','_')}`,
+        text: 'Exportando Documento ',
+        confirmButtonColor : '#157347',
+      }).then(()=>{
+
+        setLocation('/');
+        localStorage.removeItem('Facturas');      
+      })
   };
   
 

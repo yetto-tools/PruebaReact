@@ -101,7 +101,7 @@ export const FormularioCincho = () => {
   
           setLocation('/cliente');
         }
-  
+        setLocation('/cliente');
         return; 
       })
     }
